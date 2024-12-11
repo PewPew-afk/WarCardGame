@@ -1,4 +1,4 @@
-Class Card extends Hand {
+Class Card {
     public Card(){}
 
     String suit;
