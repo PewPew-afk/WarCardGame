@@ -1,13 +1,21 @@
+import java.util.Stack;
+
 Class Hand{
     public Hand(){}
 
-    List<Card> cards = new LinkedList<>();
+    Stack<Card> cards = new Stack<>();
 
-    public Hand(List<Card> cards){
+    public Hand(Stack<Card> cards){
         this.cards = cards;
     }
 
-    private static shuffle(){
+    private void shuffle(){
         //Implement shuffle logic
+    }
+
+    public Card playCard(){
+        if(!cards.isEmpty()){
+            return cards.pop();
+        }
     }
 }
