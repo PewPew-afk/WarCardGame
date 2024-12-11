@@ -4,6 +4,9 @@ Class Player{
     private Hand hand;
     private Hand discardHand;
 
+    public void addDiscard(Card card){
+      discardHand.getCards().push(card);
+    }
     
     public Card playCard(Hand hand){
       return hand.topCard()
