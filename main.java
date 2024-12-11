@@ -25,23 +25,32 @@ Class Main{
             ///if(card1.val == card2.val) {war!};
             //Winner adds played cards to their discard deck
             if(card1.val > card2.val){
-                System.out.println(player1.getName() + " wins!");
+                System.out.println(player1.getName() + " wins this round.");
                 player1.addDiscard(card1);
                 player1.addDiscard(card2);
             } else {
-                System.out.println(player2.getName() + " wins!");
+                System.out.println(player2.getName() + " wins this round.");
                 player2.addDiscard(card1);
                 player2.addDiscard(card2);
             }
             
-            // If mainDeck is empty, shuffle discardDeck and add cards to mainDeck
-            //if losing player deck is empty and their discard deck is empty, they lose
-            //if either player's deck is empty, shuffle discard deck and add to main deck
-
             //Check for winner
+            winner = checkWinner(player1, player2);
+            //Check decks if they need to shuffle in discardDeck
+
         }
 
-        //Check for winner
+    }
+
+    private static boolean checkWinner(Player player1, Player player2){
+        if(player1.getDeck().isEmpty() && player1.getDiscardDeck().isEmpty()){
+            System.out.println(player2.getName() + " wins!");
+            return true;
+        }
+        if(player2.getDeck().isEmpty() && player2.getDiscardDeck().isEmpty()){
+            System.out.println(player1.getName() + " wins!");
+            return true;
+        }
     }
 
 }
