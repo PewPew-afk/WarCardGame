@@ -9,4 +9,8 @@ Class Card extends Hand {
         this.value = value;
     }
 
+    public Card(int value){
+        this.value = vale;
+    }
+
 }
