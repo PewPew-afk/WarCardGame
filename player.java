@@ -1,14 +1,13 @@
 Class Player{
   public class Player(){
-    public String name;
+    private String name;
     private Hand hand;
     private Hand discardHand;
+
     
     public Card playCard(Hand hand){
       return hand.topCard()
     }
-
-      
     public Hand getHand(){
       return hand;
     }
@@ -20,6 +19,12 @@ Class Player{
     }
     public void setDiscardHand(Hand discardHand){
       this.discardHand = discardHand;
+    }
+    public String getName(){
+      return name;
+    }
+    public void setName(String name){
+      this.name = name;
     }
     
   }
