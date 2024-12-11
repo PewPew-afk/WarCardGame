@@ -25,11 +25,11 @@ Class Main{
             ///if(card1.val == card2.val) {war!};
             //Winner adds played cards to their discard deck
             if(card1.val > card2.val){
-                System.out.println(player1.name() + " wins!");
+                System.out.println(player1.getName() + " wins!");
                 player1.addDiscard(card1);
                 player1.addDiscard(card2);
             } else {
-                System.out.println(player2.name() + " wins!");
+                System.out.println(player2.getName() + " wins!");
                 player2.addDiscard(card1);
                 player2.addDiscard(card2);
             }
