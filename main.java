@@ -43,11 +43,11 @@ Class Main{
     }
 
     private static boolean checkWinner(Player player1, Player player2){
-        if(player1.getDeck().isEmpty() && player1.getDiscardDeck().isEmpty()){
+        if(player1.getHand().isEmpty() && player1.getDiscardHand().isEmpty()){
             System.out.println(player2.getName() + " wins!");
             return true;
         }
-        if(player2.getDeck().isEmpty() && player2.getDiscardDeck().isEmpty()){
+        if(player2.getHand().isEmpty() && player2.getDiscardHand().isEmpty()){
             System.out.println(player1.getName() + " wins!");
             return true;
         }
