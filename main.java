@@ -15,26 +15,33 @@ Class Main{
         //Core Game Loop
         while(!winner){
             /// Players play cards
-            int card1 = topCard(player1);
-            int card2 = topCard(player2);
+            Card card1 = player1.playCard();
+            Card card2 = player2.playCard();
 
-            System.out.println("Player 1: " + card1 + "vs" + " Player 2: " + card2);
+            System.out.println(player1.name() + ": " + card1.val + " vs " + player2.getName() + ": " + card2.val);
 
-            /// Compare cards
-            /// Winner adds cards to their discardDeck
-            /// If mainDeck is empty, shuffle discardDeck and add cards to mainDeck
+            // Compare cards
+            //Implement "Wars" on ties
+            ///if(card1.val == card2.val) {war!};
+            //Winner adds played cards to their discard deck
+            if(card1.val > card2.val){
+                System.out.println(player1.name() + " wins!");
+                player1.addDiscard(card1);
+                player1.addDiscard(card2);
+            } else {
+                System.out.println(player2.name() + " wins!");
+                player2.addDiscard(card1);
+                player2.addDiscard(card2);
+            }
+            
+            // If mainDeck is empty, shuffle discardDeck and add cards to mainDeck
+            //if losing player deck is empty and their discard deck is empty, they lose
+            //if either player's deck is empty, shuffle discard deck and add to main deck
+
+            //Check for winner
         }
-        
-        /// Players play cards
-        /// Compare cards
-        /// Winner adds cards to their discardDeck
-        /// If mainDeck is empty, shuffle discardDeck and add cards to mainDeck
 
-
-        //Implement "Wars" on ties
+        //Check for winner
     }
 
-    private int topCard(Player player){
-        player.deck.playCard();
-    }
 }
