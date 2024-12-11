@@ -13,7 +13,7 @@ Class Hand{
         //Implement shuffle logic
     }
 
-    public Card playCard(){
+    public Card topCard(){
         if(!cards.isEmpty()){
             return cards.pop();
         }
