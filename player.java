@@ -8,7 +8,7 @@ Class Player{
       discardHand.getCards().push(card);
     }
     
-    public Card playCard(Hand hand){
+    public Card playCard(){
       return hand.topCard()
     }
     public Hand getHand(){
