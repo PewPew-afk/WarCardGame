@@ -25,4 +25,8 @@ Class Hand{
             return cards.pop();
         }
     }
+
+    public boolean isEmpty(){
+        return cards.isEmpty();
+    }
 }
