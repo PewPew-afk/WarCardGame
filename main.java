@@ -18,7 +18,7 @@ Class Main{
             Card card1 = player1.playCard();
             Card card2 = player2.playCard();
 
-            System.out.println(player1.name() + ": " + card1.val + " vs " + player2.getName() + ": " + card2.val);
+            System.out.println(player1.getName() + ": " + card1.val + " vs " + player2.getName() + ": " + card2.val);
 
             // Compare cards
             //Implement "Wars" on ties
