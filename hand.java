@@ -9,6 +9,13 @@ Class Hand{
         this.cards = cards;
     }
 
+    public Stack<Card> getCards(){
+        return cards;
+    }
+    public void setCards(Stack<Card> cards){
+        this.cards = cards;
+    }
+
     private void shuffle(){
         //Implement shuffle logic
     }
