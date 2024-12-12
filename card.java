@@ -1,16 +1,9 @@
-Class Card {
-    public Card(){}
-
-    String suit;
-    int value;
-
-    public Card(String suit, int value){
-        this.suit = suit;
-        this.value = value;
-    }
+class Card {
+    
+    public int value;
 
     public Card(int value){
-        this.value = vale;
+        this.value = value;
     }
 
 }

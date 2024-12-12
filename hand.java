@@ -1,13 +1,12 @@
 import java.util.Stack;
+import java.util.Collections;
 
-Class Hand{
-    public Hand(){}
-
-    Stack<Card> cards = new Stack<>();
-
-    public Hand(Stack<Card> cards){
-        this.cards = cards;
+class Hand{
+    public Hand(){
+        this.cards = new Stack<Card>();
     }
+
+    private Stack<Card> cards = new Stack<>();
 
     public Stack<Card> getCards(){
         return cards;
@@ -16,17 +15,25 @@ Class Hand{
         this.cards = cards;
     }
 
-    private void shuffle(){
-        //Implement shuffle logic
-    }
-
-    public Card topCard(){
-        if(!cards.isEmpty()){
-            return cards.pop();
-        }
+    public void shuffle(){
+        Collections.shuffle(cards);
     }
 
     public boolean isEmpty(){
         return cards.isEmpty();
     }
+
+    public void addCard(Card card){
+        cards.push(card);
+    }
+
+    public void clear(){
+        cards.clear();
+    }
+
+    public Card pop(){
+        return cards.pop();
+    }
+
+    
 }
