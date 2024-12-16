@@ -23,7 +23,7 @@ class Main{
             //Implement "Wars" on ties
             if(card1.value == card2.value){
                 System.out.println("War! ----- WIP");
-                System.out.println("still working on this");
+                System.out.println("still working BLAKE WAS HERE on this");
                 break;
             };
             //Winner adds played cards to their discard deck
