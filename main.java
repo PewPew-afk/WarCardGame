@@ -71,7 +71,7 @@ class Main{
         Hand fullDeck = new Hand();
         for(int i = 2; i <= 13; i++){
             for(int j = 1; j <= 4; j++){
-                Card card = new Card(j);
+                Card card = new Card(i);
                 fullDeck.addCard(card);
             }
         }
